@@ -1,26 +1,26 @@
 from django.conf import settings
 from django.core.mail import send_mail
+from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from django.db.models import Avg
-from rest_framework import status
-from rest_framework.decorators import api_view, action
+from rest_framework import filters, mixins, status, viewsets
+from rest_framework.decorators import action, api_view
 from rest_framework.filters import SearchFilter
-from rest_framework.response import Response
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
-from rest_framework import viewsets, mixins, filters
-from reviews.models import Title, Category, Genre, Review
-from .serializers import (RegisterSerializer, TokenSerializer, UserSerializer,
-                          TitleCreateSerializer, TitleSerializer,
-                          CategorySerializer, GenreSerializer,
-                          ReviewSerializer, CommentSerializer,
-                          UserRestrictSerializer)
-from .permissions import (IsAdminOrReadOnly, IsAdmin,
-                          IsModeratorAdminAuthorOrReadOnly)
-from .filters import CategoriesFilter, GenresFilter, TitlesFilter
+from rest_framework.response import Response
+from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
+from .filters import CategoriesFilter, GenresFilter, TitlesFilter
+from .permissions import (IsAdmin, IsAdminOrReadOnly,
+                          IsModeratorAdminAuthorOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, RegisterSerializer,
+                          ReviewSerializer, TitleCreateSerializer,
+                          TitleSerializer, TokenSerializer,
+                          UserRestrictSerializer, UserSerializer)
 
 
 class MixinSet(

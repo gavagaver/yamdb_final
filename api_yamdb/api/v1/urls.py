@@ -1,9 +1,8 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework import routers
-from .views import register, get_token
-
 
 from . import views
+from .views import get_token, register
 
 app_name = 'api_v1'
 
