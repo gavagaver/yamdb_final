@@ -35,7 +35,17 @@ SECRET_KEY=p&l%385148ksll%385148ksll%385148ksll%385148ksl
 ```bash
  git clone git@github.com:gavagaver/infra_sp2.git 
 ```
-1. [ ] Создаем и запускаем докер-контейнеры
+1. [ ] Выполняем вход на удаленный сервер
+2. [ ] Устанавливаем на сервере docker
+```bash
+apt install docker.io 
+```
+1. [ ] Устанавливаем на сервере docker-compose
+```bash
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+```
+1. [ ] Создаем и запускаем docker-контейнеры
 ``` 
 docker-compose up -d --build 
 ```
@@ -60,5 +70,4 @@ docker-compose exec web python manage.py collectstatic --no-input
 docker-compose exec web python manage.py loaddata <путь до файла>
 ``` 
 
-
-Проект доступен по [ссылке](http://158.160.68.180)
+### Проект доступен по [ссылке](http://158.160.68.180).
