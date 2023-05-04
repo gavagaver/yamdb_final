@@ -27,3 +27,38 @@ DB_HOST=db
 DB_PORT=5432
 SECRET_KEY=p&l%385148ksll%385148ksll%385148ksll%385148ksl
 ```
+
+
+## Установка и запуск
+
+1. [x] Клонируем репозиторий 
+```bash
+ git clone git@github.com:gavagaver/infra_sp2.git 
+```
+1. [x] Создаем и запускаем докер-контейнеры
+``` 
+docker-compose up -d --build 
+```
+1. [ ] Создаем миграции
+``` 
+docker-compose exec web python manage.py makemigrations 
+```
+1. [ ] Применяем миграции
+``` 
+docker-compose exec web python manage.py migrate 
+``` 
+1. [ ] Создаем суперпользователя
+``` 
+docker-compose exec web python manage.py createsuperuser 
+``` 
+1. [ ] Собираем статику
+``` 
+docker-compose exec web python manage.py collectstatic --no-input 
+``` 
+1. [ ] Заполняем базу данными
+``` 
+docker-compose exec web python manage.py loaddata <путь до файла>
+``` 
+
+
+Проект доступен по [ссылке](http://158.160.68.180)
