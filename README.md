@@ -33,7 +33,7 @@ SECRET_KEY=p&l%385148ksll%385148ksll%385148ksll%385148ksl
 
 1. [ ] Клонируем репозиторий 
 ```bash
- git clone git@github.com:gavagaver/infra_sp2.git 
+ git clone git@github.com:gavagaver/yamdb_final.git 
 ```
 1. [ ] Выполняем вход на удаленный сервер
 2. [ ] Устанавливаем на сервере docker
