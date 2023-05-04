@@ -70,4 +70,4 @@ docker-compose exec web python manage.py collectstatic --no-input
 docker-compose exec web python manage.py loaddata <путь до файла>
 ``` 
 
-### Проект доступен по [ссылке](http://158.160.68.180).
+### Проект доступен по [ссылке](http://158.160.68.180/api/v1/).
