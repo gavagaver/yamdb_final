@@ -28,7 +28,7 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       
-      - ./redoc.yaml:var/html/static/redoc.yaml
+      - ../api_yamdb/api/static/redoc.yaml:var/html/static/redoc.yaml
 
       - static_value:/var/html/static/
 
