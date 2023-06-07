@@ -1,7 +1,8 @@
-# Проект YaMDb
+# Проект YaMDb - сервис отзывов.
 [![CI](https://github.com/gavagaver/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/gavagaver/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
+
 ## Описание
 
 Проект YaMDb собирает отзывы пользователей на произведения. Произведения делятся на категории: Книги, Фильмы, Музыка.
@@ -69,5 +70,21 @@ docker-compose exec web python manage.py collectstatic --no-input
 ``` 
 docker-compose exec web python manage.py loaddata <путь до файла>
 ``` 
+## Стек
+- Python 3
+- Django 3.2
+- Django REST Framework
+- PostgreSQL
+- gunicorn
+- nginx
+- Яндекс.Облако (Ubuntu 20.04)
+- Simple-JWT
+- GIT
 
-### Проект доступен по [ссылке](http://158.160.68.180/api/v1/).
+## Авторы
+
+[gavagaver](https://github.com/gavagaver)
+
+[Antisyslik](https://github.com/Antisyslik) 
+
+[grinfeldV](https://github.com/grinfeldV)
