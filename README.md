@@ -1,5 +1,4 @@
 # Проект YaMDb - сервис отзывов
-[![CI](https://github.com/gavagaver/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/gavagaver/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
 
