@@ -70,7 +70,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 docker-compose exec web python manage.py loaddata <путь до файла>
 ``` 
 ## Стек
-- Python 3
+- Python 3.7
 - Django 3.2
 - Django REST Framework
 - PostgreSQL
