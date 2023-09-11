@@ -80,6 +80,7 @@ docker-compose exec web python manage.py loaddata <путь до файла>
 - Яндекс.Облако (Ubuntu 20.04)
 - Simple-JWT
 - GIT
+- Docker
 
 ## Авторы
 
